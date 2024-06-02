@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="logo-shaurya.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dosis:wght@200..800&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Quicksand:wght@300..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    
+    <div class="logos">
+        <div class="shaurya-logo">
+          <img  src="logo-shaurya-bd7e4925.png">
+        </div>
+    
+        <div class="title">REGISTER AT SHAURYA</div>
+    
+        <div class="kgp-logo">
+          <img class="kgplogoi" src="kgp-logo.png">
+        </div>
+    </div>
+    
+    <div class="sideim">
+        <img src="shaurya-landing.png" class="s">
+    </div>
+   
+    <title>Registration - Shaurya</title>
+    <style>
+     .logos{
+        margin-bottom: 180px;
+
+     }
+        
+     .kgp-logo{
+        display: inline-block;
+        right: 0px;
+        top: 10px;
+        position: fixed;
+     }
+     
+
+     .kgplogoi{
+        height: 55px;
+     }
+
+     .shaurya-logo{
+        display: inline-block;
+        position: fixed;
+        top: 10px;
+     }
+
+     .s{
+        height: 180px;
+     }
+
+     .sideim{
+        display: inline-block;
+        position: fixed;
+        top: 300px;
+        left: 730px;
+     }
+
+     .mainbox{
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        width: 800px;
+        opacity: 0.7;
+        position: relative;
+        top: -20px;
+        margin-left: 40px;
+        padding-left: 18px;
+        border-radius: 20px;
+        padding-top: 15px;
+        padding-bottom: 45px;
+     }
+
+     .inbox ,.inboxgen{
+        font-size: 35px;
+        font-family: "Teko",sans-serif;
+        display: block;
+        color: white;
+     }
+
+     .typebox{
+        display: block;
+        width: 90%;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        font-size: 30px;
+        font-family: "Teko",sans-serif;
+     }
+    
+     .title{
+        color: white;
+        font-family: "Teko",sans-serif;
+        font-size: 100px;
+        width: 800px;
+        text-align: center;
+        margin-left: 300px;
+        margin-bottom: -100px;
+     }
+
+     .nextbut{
+     margin-top: 70px;  
+     margin-left: 320px; 
+     height: 60px;
+     width: 120px;
+     font-family: "Teko",sans-serif;
+     font-size: 40px;
+     background: none;
+     color:rgb(251, 246, 246);
+     padding-top: 0px;
+     border: solid;
+     border-radius: 4px;
+     transition: color 0.1s;
+     }
+
+     .nextbut:hover{
+        cursor: pointer;
+        color: yellow;
+    }
+
+    .nextbut:active{
+     transition: background-color 0.1s;
+     background-color : red;
+    }
+
+     
+    .inboxgen{
+      width: 400px;
+      display: block;
+    }
+
+    .inboxgen a{
+      display: block;
+      z-index: 999;
+      text-decoration: none;
+      background-color: rgb(251, 246, 246);
+      color: rgb(55, 54, 54);
+      width: 725px;
+    }
+
+    .inboxgen a:hover{
+      background-color: rgb(192, 187, 187);
+    }
+
+    .inboxgen .genopt{
+      display: none;
+
+    }
+   
+    .genbut{
+      display: inline;
+      width: 725px;
+      border-radius: 4px;
+      border: none;
+      font-size: 30px;
+      height: 39px;
+      padding-right: 0px;
+      font-family: "Teko",sans-serif;
+      text-align: left;
+    }
+
+    .genbut:hover{
+      cursor: pointer;
+    }
+
+    .alertname1,.alertname2,.alertgmail,.alertnum,.alertgen,.alertpass1,.alertpass2{
+      color: red;
+      display: none;
+    }
+
+    </style>
+
+</head>
+
+
+<body style="background-color: black;">
+    
+
+    <div class="mainbox">
+        <div class="inbox">
+            NAME
+            <input class="typebox" type="text" id="name">
+            <div class="alertname1" id="alertname1">Please enter your full name,must contain atleast 5 letters</div>
+            <div class="alertname2" id="alertname2">Name must contain letters only</div>
+        </div>
+        
+        <div class="inbox">
+            GMAIL ID
+            <input class="typebox" type="text" id="email">
+          <div class="alertgmail" id="alertgmail">Please enter your GMAIL ID</div>
+        </div>
+       
+       <div class="inbox">
+            CONTACT NUMBER
+          <input class="typebox" type="text" id="number">
+          <div class="alertnum" id="alertnum">Number must contain 10 digits</div>
+
+       </div>
+       <div class="inboxgen">
+         GENDER
+         <button class="genbut" id="genbut" onclick="toggle()"></button>
+         <div class="genopt" id="genopt">
+            <a href="#" onclick="selectopt('Male')">Male</a>
+            <a href="#" onclick="selectopt('Female')">Female</a>
+            <a href="#" onclick="selectopt('Other')">Other</a>
+         </div>
+         <div class="alertgen" id="alertgen">Please select an option</div>
+       </div>
+       <div class="inbox">
+          PASSWORD
+          <input class="typebox" type="password" id="pass">
+          <div class="alertpass1" id="alertpass1">Password must be of atleast 8 characters</div>
+       </div>
+       <div class="inbox">
+          CONFIRM PASSWORD
+          <input class="typebox" type="password" id="passc">
+          <div class="alertpass2" id="alertpass2">Confirm password not matching</div>
+       </div>
+       <a><button class="nextbut" onclick="loadscript()">SIGN UP</button></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

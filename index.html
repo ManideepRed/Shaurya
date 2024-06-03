@@ -29,26 +29,15 @@
      .logos{
         margin-bottom: 180px;
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+
      }
         
-     .kgp-logo{
-        display: inline-block;
-        right: 0px;
-        top: 10px;
-        position: fixed;
-     }
-     
-
      .kgplogoi{
         height: 55px;
      }
 
-     .shaurya-logo{
-        display: inline-block;
-        position: fixed;
-        top: 10px;
-     }
 
      .s{
         height: 180px;
@@ -58,24 +47,27 @@
         display: inline-block;
         position: fixed;
         top: 300px;
+       
      }
-    
-    @media (min-width: 1024px){
+
+     @media (min-width: 1024px){
       .sideim{
-          left: 730px;
+          left: 730px;   
       }
     }
-     @media (max-width: 1023px){
+    @media (max-width: 1023px){
       .sideim{
           left: 50px;
       }
     }
+
+
      .mainbox{
         display: flex;
         flex-direction: column;
         background-color: gray;
         width: 800px;
-        opacity: 0.7;
+        opacity: 0.85;
         position: relative;
         top: -20px;
         margin-left: 40px;
@@ -105,12 +97,17 @@
      .title{
         color: white;
         font-family: "Teko",sans-serif;
-        font-size: 100px;
-        width: 800px;
-        text-align: center;
-        margin-left: 22%;
-        margin-bottom: -100px;
-     }
+    }
+    @media (min-width: 1024px){
+        .title{
+            font-size: 100px;
+        }}
+    @media(max-width: 1023px){
+        .title{
+            font-size: 65px;
+        }
+    }
+
      @media(min-width: 1024px){
       .title{
          font-size:100px;

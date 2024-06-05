@@ -128,8 +128,8 @@ document.addEventListener('click', function (event) {
 
 
 function togglepop() {
-    let mainbox = document.getElementById("secbox");
-    mainbox.classList.add("open-secbox");
+    let mainbox = document.getElementById("mainbox");
+    mainbox.classList.add("open-mainbox");
 }
 
 let butt1 = document.getElementById('nextbut1');
